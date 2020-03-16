@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="91" id="KGk-i7-Jjw" customClass="VoiceCell" customModule="Sandbox" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="349" height="83"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="349" height="83"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user2" translatesAutoresizingMaskIntoConstraints="NO" id="oN5-cK-DLW">
+                        <rect key="frame" x="10" y="21.5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="4v8-Vi-QDB"/>
+                            <constraint firstAttribute="width" constant="40" id="bVs-A5-Hh4"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user1" translatesAutoresizingMaskIntoConstraints="NO" id="alr-cJ-3pK">
+                        <rect key="frame" x="299" y="21.5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="7vP-7g-ZOI"/>
+                            <constraint firstAttribute="height" constant="40" id="Sq7-28-h5H"/>
+                        </constraints>
+                    </imageView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hQS-Vv-euU">
+                        <rect key="frame" x="60" y="10" width="229" height="63"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CfR-oT-dMA">
+                                <rect key="frame" x="10" y="21.5" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="20" id="bE3-kf-ube"/>
+                                    <constraint firstAttribute="height" constant="20" id="jZw-Q1-0aW"/>
+                                </constraints>
+                                <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="sliderButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="bQc-gp-ce7"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Xak-hv-UTy">
+                                <rect key="frame" x="38" y="16.5" width="183" height="31"/>
+                            </slider>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tick" translatesAutoresizingMaskIntoConstraints="NO" id="Kzr-Ml-QW4">
+                                <rect key="frame" x="209" y="43" width="16" height="16"/>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="16" id="BVL-QI-T7b"/>
+                                    <constraint firstAttribute="height" constant="16" id="NC0-yv-X8R"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1:20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nz-XK-kcy">
+                                <rect key="frame" x="40" y="48.5" width="21" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.35334783079999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3nz-XK-kcy" firstAttribute="top" secondItem="Xak-hv-UTy" secondAttribute="bottom" constant="2" id="3JL-Zc-GCW"/>
+                            <constraint firstItem="3nz-XK-kcy" firstAttribute="leading" secondItem="Xak-hv-UTy" secondAttribute="leading" id="CkT-5B-anD"/>
+                            <constraint firstItem="Xak-hv-UTy" firstAttribute="leading" secondItem="CfR-oT-dMA" secondAttribute="trailing" constant="10" id="Olu-j2-4bL"/>
+                            <constraint firstItem="CfR-oT-dMA" firstAttribute="centerY" secondItem="hQS-Vv-euU" secondAttribute="centerY" id="PAN-cc-x9J"/>
+                            <constraint firstItem="Xak-hv-UTy" firstAttribute="centerY" secondItem="hQS-Vv-euU" secondAttribute="centerY" id="Pjy-2T-iWA"/>
+                            <constraint firstAttribute="trailing" secondItem="Kzr-Ml-QW4" secondAttribute="trailing" constant="4" id="Q4Q-Cq-TTU"/>
+                            <constraint firstAttribute="bottom" secondItem="Kzr-Ml-QW4" secondAttribute="bottom" constant="4" id="Wew-bR-jvW"/>
+                            <constraint firstItem="CfR-oT-dMA" firstAttribute="leading" secondItem="hQS-Vv-euU" secondAttribute="leading" constant="10" id="iyq-A6-pHS"/>
+                            <constraint firstAttribute="trailing" secondItem="Xak-hv-UTy" secondAttribute="trailing" constant="10" id="kS6-Ys-N1h"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="hQS-Vv-euU" firstAttribute="leading" secondItem="oN5-cK-DLW" secondAttribute="trailing" constant="10" id="4O4-mZ-Z6q"/>
+                    <constraint firstItem="oN5-cK-DLW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="50m-IQ-MCM"/>
+                    <constraint firstItem="oN5-cK-DLW" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="5d3-NG-Hwg"/>
+                    <constraint firstItem="hQS-Vv-euU" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="64G-c8-eAt"/>
+                    <constraint firstAttribute="bottom" secondItem="hQS-Vv-euU" secondAttribute="bottom" constant="10" id="6rD-BQ-rQb"/>
+                    <constraint firstItem="alr-cJ-3pK" firstAttribute="leading" secondItem="hQS-Vv-euU" secondAttribute="trailing" constant="10" id="InD-M4-2mF"/>
+                    <constraint firstItem="alr-cJ-3pK" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="OfG-uf-9ls"/>
+                    <constraint firstAttribute="trailing" secondItem="alr-cJ-3pK" secondAttribute="trailing" constant="10" id="h8y-3I-tBO"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bubbleView" destination="hQS-Vv-euU" id="uwj-Nv-uEY"/>
+                <outlet property="slider" destination="Xak-hv-UTy" id="CM5-z2-itO"/>
+                <outlet property="startButton" destination="CfR-oT-dMA" id="5In-za-EZQ"/>
+                <outlet property="tickIcon" destination="Kzr-Ml-QW4" id="8QN-NO-buX"/>
+                <outlet property="user1Icon" destination="alr-cJ-3pK" id="DmH-VD-GVI"/>
+                <outlet property="user2Icon" destination="oN5-cK-DLW" id="WJE-Ro-II5"/>
+                <outlet property="voiceLengthLabel" destination="3nz-XK-kcy" id="5Qh-xQ-ThI"/>
+            </connections>
+            <point key="canvasLocation" x="157.24637681159422" y="122.87946428571428"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="play" width="512" height="512"/>
+        <image name="tick" width="512" height="512"/>
+        <image name="user1" width="350" height="350"/>
+        <image name="user2" width="420" height="630"/>
+    </resources>
+</document>
