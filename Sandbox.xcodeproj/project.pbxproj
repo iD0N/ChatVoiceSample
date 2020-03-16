@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8797463BABF344B094D2E4F3 /* Pods_Sandbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6612EA9C5577E616DC88B45 /* Pods_Sandbox.framework */; };
+		F60E734E241F7058004B612D /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E734C241F7058004B612D /* DataManager.swift */; };
+		F60E734F241F7058004B612D /* Storage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F60E734D241F7058004B612D /* Storage.swift */; };
 		F61C732B241AF7D000F84099 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61C732A241AF7D000F84099 /* AppDelegate.swift */; };
 		F61C732F241AF7D000F84099 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61C732E241AF7D000F84099 /* ViewController.swift */; };
 		F61C7332241AF7D000F84099 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F61C7330241AF7D000F84099 /* Main.storyboard */; };
@@ -30,6 +32,8 @@
 		1BF78337EFCCE9729ABF6C33 /* Pods-Sandbox.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sandbox.debug.xcconfig"; path = "Target Support Files/Pods-Sandbox/Pods-Sandbox.debug.xcconfig"; sourceTree = "<group>"; };
 		D6612EA9C5577E616DC88B45 /* Pods_Sandbox.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sandbox.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0A0AA8A9EFF25E1BE8EBF9F /* Pods-Sandbox.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sandbox.release.xcconfig"; path = "Target Support Files/Pods-Sandbox/Pods-Sandbox.release.xcconfig"; sourceTree = "<group>"; };
+		F60E734C241F7058004B612D /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		F60E734D241F7058004B612D /* Storage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storage.swift; sourceTree = "<group>"; };
 		F61C7327241AF7D000F84099 /* Sandbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sandbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F61C732A241AF7D000F84099 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F61C732E241AF7D000F84099 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 		F685A565241EC66600B97A5A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				F60E734C241F7058004B612D /* DataManager.swift */,
+				F60E734D241F7058004B612D /* Storage.swift */,
 				F61C7350241D1D5200F84099 /* ChatCellSizeCalculator.swift */,
 				F685A558241E899E00B97A5A /* RecordManager.swift */,
 				F685A55A241E89A600B97A5A /* PlayerManager.swift */,
@@ -276,9 +282,11 @@
 				F61C7351241D1D5200F84099 /* ChatCellSizeCalculator.swift in Sources */,
 				F61C734E241D1D4100F84099 /* ChatCell.swift in Sources */,
 				F685A557241E736400B97A5A /* PanView.swift in Sources */,
+				F60E734F241F7058004B612D /* Storage.swift in Sources */,
 				F685A55B241E89A600B97A5A /* PlayerManager.swift in Sources */,
 				F61C732B241AF7D000F84099 /* AppDelegate.swift in Sources */,
 				F685A551241D833000B97A5A /* MessageModel.swift in Sources */,
+				F60E734E241F7058004B612D /* DataManager.swift in Sources */,
 				F685A554241D84AB00B97A5A /* VoiceCell.swift in Sources */,
 				F685A561241EBDE300B97A5A /* ChatTopView.swift in Sources */,
 			);

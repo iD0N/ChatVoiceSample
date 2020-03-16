@@ -19,9 +19,18 @@ class PlayerManager: NSObject
 	static var shared = PlayerManager()
 	
 	func startPlaying(url: URL) {
-		
+
+		guard let path = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+		else {
+			return
+		}
+		var newURL = path.appendingPathComponent(url.lastPathComponent)
+		if url.lastPathComponent == MessageModel.mockSound.lastPathComponent
+		{
+			newURL = MessageModel.mockSound
+		}
 		do {
-			let sound = try Data(contentsOf: url)
+			let sound = try Data(contentsOf: newURL)
 			try AVAudioSession.sharedInstance().setCategory(.playback)
 			try AVAudioSession.sharedInstance().setActive(true)
 			

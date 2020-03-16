@@ -18,7 +18,7 @@ class ViewController: UIViewController {
 	var inputBar: InputBarAccessoryView = InputBarAccessoryView()
 	
 	//Message data
-	var messages = MessageModel.mockMessages
+	var messages = DataManager.standard.messages
 	var messageSizeCache: [Int : CGSize] = [:]
 	
 	//Managers/Helpers
@@ -30,10 +30,16 @@ class ViewController: UIViewController {
 	//Timer
 	var recordTimer: Timer?
 	var timerCounterLabel: UILabel?
-	
+	//Overlay
+	var overlayView: UIView?
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
+		if messages.count == 0
+		{
+			messages = MessageModel.mockMessages
+			DataManager.standard.messages = messages
+		}
 		navigationItem.titleView = topView
 		
 		navigationItem.leftBarButtonItem = UIBarButtonItem(image: #imageLiteral(resourceName: "back").resizeImage(targetSize: CGSize(width: 20, height: 20)), style: .done, target: nil, action: nil)
@@ -81,6 +87,14 @@ class ViewController: UIViewController {
 	{
 		let view = PanView()
 		view.delegate = self
+		
+		if overlayView == nil
+		{
+			overlayView = UIView()
+			overlayView!.backgroundColor = UIColor.black.withAlphaComponent(0.4)
+		}
+		overlayView?.frame = self.view.bounds
+		self.view.insertSubview(overlayView!, belowSubview: inputBar)
 		//view.backgroundColor = .black
 		let items = [
 			.fixedSpace(10),
@@ -118,6 +132,7 @@ class ViewController: UIViewController {
 	
 	//Switch to normal state
 	func createNormalInputBar() {
+		overlayView?.removeFromSuperview()
 		inputBar.backgroundView.backgroundColor = #colorLiteral(red: 0.1450371444, green: 0.130322814, blue: 0.2307013273, alpha: 1)
 		inputBar.setMiddleContentView(inputBar.inputTextView, animated: false)
 		let items = [
@@ -251,6 +266,7 @@ extension ViewController: InputBarAccessoryViewDelegate
 		messageSizeCache = [:]
 		
 		messages.insert(MessageModel(message: .voice(VoiceModel(data: recordManager.recordingFile ?? URL(fileURLWithPath: ""), length: length)), isSenderMe: true, isRead: false, date: "10:10 pm"), at: 0)
+		DataManager.standard.messages = messages
 		self.tableView.reloadData()
     }
 }
